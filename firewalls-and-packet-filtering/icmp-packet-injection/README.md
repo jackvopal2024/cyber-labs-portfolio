@@ -15,7 +15,7 @@ This lab demonstrates how ICMP packets can be forged and injected into a network
 - Verified whether the victim responded to the spoofed sender
 - Observed traffic at both the attacker and victim
 
-![Spoofed ICMP packet sent](screenshots/01-spoofed-icmp-packet-sent.png)
+![Spoofed ICMP packet sent](Screenshots/01-spoofed-icmp-packet-sent.png)
 
 The attacker intercepted ICMP traffic on the network and injected a forged ICMP echo-request packet using Scapy. The packet was crafted with a spoofed source IP to impersonate another host on the subnet.
 
