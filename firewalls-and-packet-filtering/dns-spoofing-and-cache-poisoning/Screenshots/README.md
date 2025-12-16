@@ -1,1 +1,1 @@
-Screenshots for DNS spoofing
+Screenshots for DNS spoofing/cashe poisening
