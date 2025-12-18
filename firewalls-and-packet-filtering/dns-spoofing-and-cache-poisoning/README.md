@@ -24,3 +24,21 @@ This lab demonstrates how DNS responses can be spoofed and manipulated to redire
 
 ## Security Implications
 These attacks demonstrate why DNSSEC, restricted resolver configuration, and network segmentation are critical for protecting name resolution infrastructure.
+
+## Verification
+
+![Forged reply accepted](Screenshots/01-forged-dns-reply-accepted.png)
+
+The user accepted a forged DNS response that arrived before the legitimate reply, resolving the domain to an attacker-controlled IP.
+
+![Authoritative override](Screenshots/02-authoritative-zone-override.png)
+
+By configuring the local resolver as authoritative for the target zone, poisoning became deterministic rather than probabilistic.
+
+![CNAME chain abuse](Screenshots/03-cname-chain-to-attacker.png)
+
+The resolution chain terminated at an attacker-controlled host due to the poisoned authoritative response.
+
+![Bailiwick protection](Screenshots/04-bailiwick-protection-evidence.png)
+
+Out-of-bailiwick records placed in the Additional section were not cached, demonstrating modern resolver defenses.
